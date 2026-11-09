@@ -177,7 +177,12 @@ fieldset.rads-sec legend + *{clear:both}
 .leaflet-container a.leaflet-popup-close-button{width:32px;height:32px;font:20px/30px Tahoma,Verdana,sans-serif;color:var(--rads-muted)}
 .leaflet-container a.leaflet-popup-close-button:hover{color:var(--rads-red)}
 .leaflet-tooltip{border-radius:0;border:1px solid var(--rads-border);box-shadow:var(--rads-shadow);color:var(--rads-text)}
-.leaflet-control-attribution{font-size:11px}
+/* attribution: one small line with only the credits the tile providers require; other credits go in the note */
+.leaflet-container .leaflet-control-attribution{
+  margin:0;padding:1px 6px;font-size:10px;line-height:1.5;color:var(--rads-muted);
+  background:rgba(255,255,255,.78);max-width:calc(100vw - 24px);
+}
+.leaflet-container .leaflet-control-attribution a{color:var(--rads-muted)}
 
 @media (prefers-reduced-motion:reduce){
   .rads-ui,.rads-ui *{transition:none!important;animation:none!important;scroll-behavior:auto!important}

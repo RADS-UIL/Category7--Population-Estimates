@@ -10,7 +10,7 @@
 (function(global){
   'use strict';
 
-  var VERSION = '1.0.0';
+  var VERSION = '1.1.0';
   var NARROW = 600;                 // below this width the panel starts collapsed
   var BUDGET = {title:60, layers:6, note:300};
 
@@ -315,6 +315,8 @@
     S.map = map; S.cfg = cfg || {}; S.h = handlers || {};
     cfg = S.cfg;
 
+    // no "Leaflet" link in the attribution strip; tile credits stay
+    if(map.attributionControl) map.attributionControl.setPrefix(false);
     buildChip(cfg);
     buildStatus();
     buildPanel(cfg);
